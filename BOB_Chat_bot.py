@@ -38,7 +38,7 @@ class Bob_ChatBot():
                 audio_recognizer.adjust_for_ambient_noise(source,0.5)
                 self.audio = audio_recognizer.listen(source, timeout=10)
         
-                self.user_voice = audio_recognizer.recognize_whisper(self.audio) #? uses whisper which doesnt need internet to work and is really accurate
+                self.user_voice = audio_recognizer.recognize_whisper(self.audio) #? uses whisper ai which doesnt need internet to work and is really accurate
                 if self.user_voice == "":
                     self.speak("I'm sorry I didn't hear you?")
                     self.listen()
