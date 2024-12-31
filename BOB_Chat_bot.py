@@ -3,11 +3,10 @@ from Settings import *
 class Bob_ChatBot():
     def __init__(self):
         self.app_is_running = True
-        self.speak(f"Hello, I am APOLLO! I am your voice assistant! Ask away!")
+        self.speak(f"Hello, I am Bob! I am your voice assistant! Ask away!")
         
         
     def run(self):
-        
         self.speak("Alright let's talk!")
         self.listen()
         conversation = self.user_voice
@@ -26,13 +25,9 @@ class Bob_ChatBot():
             else:
                 continue
             
-                
-        
-    
     def listen(self):
         with sr.Microphone() as source:
             self.speak("Listening...")
-            
             
             try:
                 audio_recognizer.adjust_for_ambient_noise(source,0.5)
